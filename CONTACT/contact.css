@@ -1,0 +1,284 @@
+/* Stiluri generale */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  background-color: #ffcc33;
+  height: 60px;
+}
+
+header img {
+  height: 100px;
+  margin-left: 20px;
+}
+
+nav {
+  background-color: #d9d9d9;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 0.85em;
+  line-height: 40px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  padding: 20px;
+  background-color: #fdfdfd;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  background-color: #ffcc33;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.section-title i {
+  margin-right: 10px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Stiluri pentru cardurile de contact */
+.contact-card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #ffcc33;
+}
+
+.contact-header i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.contact-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.contact-card p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Stiluri pentru formular */
+.contact-info,
+.contact-form {
+  flex: 1;
+  background-color: #f8f8f8;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 20px;
+  padding: 15px;
+  background-color: #ffcc33;
+  border-radius: 5px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+}
+
+.form-group label i {
+  margin-right: 8px;
+  color: #ffcc33;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ffcc33;
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #ffcc33;
+  color: #333;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ffc000;
+}
+
+.contact-form button i {
+  margin-right: 8px;
+}
+
+/* Stiluri pentru hartă */
+.map-container {
+  margin-top: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+  display: block;
+}
+
+/* FOOTER */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #ffcc33;
+}
+
+footer a {
+  color: #ffcc33;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Stiluri pentru iconițe sociale */
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link i {
+  width: 20px;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .main {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 20px;
+  }
+
+  .contact-card {
+    padding: 15px;
+  }
+
+  .form-title {
+    font-size: 18px;
+  }
+
+  .contact-header i {
+    font-size: 20px;
+  }
+}
+

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Lumea Filmelor</title>
+    <link rel="stylesheet" href="./contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <img src="../IMAGINI/LOGO.jpeg" alt="Logo cinema" width="100" />
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../CINEMA/cinema.html">CINEMA</a></li>
+        <li><a href="../FILME NOI/filme_noi.html">FILME NOI</a></li>
+        <li><a href="../GENURI/genuri.html">GENURI</a></li>
+        <li><a href="../OFERTE/oferte.html">OFERTE</a></li>
+        <li><a href="../CONTACT/contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <div class="main">
+      <div class="section-title">
+        <i class="fas fa-envelope"></i> CONTACT
+      </div>
+      
+      <div class="contact-container">
+        <!-- Informații de contact -->
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-header">
+              <i class="fas fa-location-dot"></i>
+              <h3>Locație</h3>
+            </div>
+            <p>Str. Careiului nr. 30, 410583,<br/>Satu-Mare, România</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-header">
+              <i class="fas fa-phone"></i>
+              <h3>Telefon</h3>
+            </div>
+            <p>0359 444 757</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-header">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+            </div>
+            <p>contact@lumeafilmelor.ro</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-header">
+              <i class="fas fa-clock"></i>
+              <h3>Program</h3>
+            </div>
+            <p>Luni - Duminică: 10:00-00:00</p>
+          </div>
+
+          <!-- Harta Google Maps -->
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2692.589448337721!2d22.881095776992415!3d47.79209657459455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47380dad24bc4f3f%3A0xb1b3358c1996c75b!2sStrada%20Careiului%2030%2C%20Satu%20Mare!5e0!3m2!1sro!2sro!4v1704709436599!5m2!1sro!2sro" 
+              width="100%" 
+              height="300" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Formular de contact -->
+        <div class="contact-form">
+          <div class="form-title">
+            <i class="fas fa-paper-plane"></i> TRIMITE-NE UN MESAJ
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="nume">
+                <i class="fas fa-user"></i> Nume:
+              </label>
+              <input type="text" id="nume" name="nume" required placeholder="Introduceți numele" />
+            </div>
+
+            <div class="form-group">
+              <label for="prenume">
+                <i class="fas fa-user"></i> Prenume:
+              </label>
+              <input type="text" id="prenume" name="prenume" required placeholder="Introduceți prenumele" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">
+                <i class="fas fa-envelope"></i> Email:
+              </label>
+              <input type="email" id="email" name="email" required placeholder="Introduceți adresa de email" />
+            </div>
+
+            <div class="form-group">
+              <label for="mesaj">
+                <i class="fas fa-message"></i> Mesaj:
+              </label>
+              <textarea id="mesaj" name="mesaj" rows="5" required placeholder="Scrieți mesajul dvs. aici..."></textarea>
+            </div>
+
+            <button type="submit">
+              <i class="fas fa-paper-plane"></i> TRIMITE
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <footer>
+      <div>
+        <!--Prima coloană-->
+        <div>
+          <h4><a href="#">Lumea Filmelor</a></h4>
+          <p>
+            <a href="#">Cinema</a> - <a href="#">Noi</a> -
+            <a href="#">Genuri</a> - <a href="#">Oferte</a> -
+            <a href="#">Contact</a>
+          </p>
+        </div>
+        <!--A doua coloană-->
+        <div>
+          <h4>Cinematografe:</h4>
+          <p>București</p>
+          <p>Satu Mare</p>
+          <p>Sibiu</p>
+        </div>
+        <!--A treia coloană-->
+        <div>
+          <h4>Urmărește-ne:</h4>
+          <p class="social-link">
+            <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+          </p>
+          <p class="social-link">
+            <a href="#"><i class="fab fa-youtube"></i>YouTube</a>
+          </p>
+          <p class="social-link">
+            <a href="#"><i class="fab fa-tiktok"></i>TikTok</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

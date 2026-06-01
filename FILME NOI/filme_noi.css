@@ -1,0 +1,241 @@
+/* Stiluri generale */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  background-color: #ffcc33;
+  height: 60px;
+}
+
+header img {
+  height: 100px;
+  margin-left: 20px;
+}
+
+nav {
+  background-color: #d9d9d9;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 0.85em;
+  line-height: 40px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* SECTION */
+section {
+  margin: 20px auto;
+  max-width: 1200px;
+  text-align: center;
+  background-color: #fff;
+  padding: 0px;
+  border-radius: 8px;
+}
+
+section h2 {
+  text-align: center;
+  background-color: #ffcc33;
+  padding: 10px;
+  margin: 0 0 20px;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+/* FILMS */
+.film-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff, #f9f9f9);
+  margin: 20px auto;
+  max-width: 1100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.film-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.film-item img {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.film-item p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #555;
+}
+
+.film-item h3 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  color: #222;
+  font-weight: bold;
+}
+
+.film-item .details-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff5722;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.film-item .details-btn:hover {
+  background-color: #e64a19;
+}
+
+/* Responsivitate */
+@media (max-width: 768px) {
+  .film-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .film-item img {
+    margin: 0 0 15px 0;
+    width: 150px;
+  }
+
+  .film-item p {
+    text-align: center;
+  }
+}
+
+.film-item img.right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* FOOTER */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #ffcc33;
+}
+
+footer a {
+  color: #ffcc33;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link i {
+  width: 20px;
+  text-align: center;
+}
+
+/* Versiunea pentru tabletă */
+@media (max-width: 768px) {
+  .film-item {
+    flex-direction: column; /* Așezare pe coloane */
+    align-items: center; /* Centrare pe orizontală */
+  }
+
+  .film-item img {
+    margin: 0 0 15px 0; /* Spațiu jos pentru imagine */
+    width: 150px; /* Redimensionare imagine */
+    height: auto;
+  }
+
+  .film-item p {
+    text-align: center; /* Text centrat */
+    font-size: 14px; /* Reducere dimensiune font */
+  }
+}
+
+/* Versiunea pentru telefon */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column; /* Elemente pe verticală */
+    height: auto;
+    padding: 10px;
+  }
+
+  header img {
+    height: 70px; /* Reducere dimensiune logo */
+  }
+
+  .film-item {
+    flex-direction: column; /* Elemente pe coloane */
+    margin: 15px auto; /* Spațiu redus */
+    padding: 10px; /* Reducere padding */
+  }
+
+  .film-item img {
+    width: 120px; /* Imagini mai mici */
+    margin: 0 auto 10px auto; /* Centrare imagine */
+  }
+
+  .film-item p {
+    font-size: 12px; /* Font redus */
+    line-height: 1.5; /* Spațiere mai mică */
+  }
+}

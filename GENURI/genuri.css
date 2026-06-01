@@ -1,0 +1,174 @@
+/* Stiluri generale */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: #ffcc33;
+  height: 60px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  height: 50px;
+}
+
+nav {
+  background-color: #d9d9d9;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 0.85em;
+  line-height: 40px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* SECTION */
+section {
+  margin: 20px auto;
+  max-width: 1200px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h1 {
+  text-align: center;
+  background-color: #ffe69c;
+  padding: 10px;
+  margin: 0 0 20px;
+  font-size: 24px;
+  border-radius: 5px;
+}
+section h2 {
+  text-align: center;
+  background-color: #ffe69c;
+  padding: 10px;
+  margin: 0 0 20px;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+section img {
+  width: 180px;
+  height: 270px;
+  margin: 10px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+  object-fit: cover;
+}
+
+section img:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #ffcc33;
+}
+
+footer a {
+  color: #ffcc33;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link i {
+  width: 20px;
+  text-align: center;
+}
+
+/* Versiunea pentru tabletă */
+@media (max-width: 768px) {
+  section {
+    padding: 10px; /* Reducem padding-ul general */
+  }
+
+  section img {
+    width: 150px; /* Reducem dimensiunea imaginilor */
+    height: 220px;
+    margin: 5px; /* Spațiu mai mic între imagini */
+  }
+}
+
+/* Versiunea pentru telefon */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column; /* Elemente pe verticală */
+    height: auto;
+    padding: 10px;
+  }
+
+  header img {
+    height: 40px; /* Reducem dimensiunea logo-ului */
+  }
+
+  section {
+    padding: 5px; /* Reducem padding-ul general */
+  }
+
+  section img {
+    width: 120px; /* Dimensiuni mai mici pentru imagini */
+    height: 180px;
+    margin: 5px auto; /* Centrare și spațiu redus */
+  }
+}

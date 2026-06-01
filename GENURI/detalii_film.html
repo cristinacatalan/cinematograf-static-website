@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalii Film</title>
+    <link rel="stylesheet" href="./detalii_film.css" />
+    <link rel="stylesheet" href="../FILME NOI/filme_noi.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <img src="../IMAGINI/LOGO.jpeg" alt="Logo cinema" width="100" />
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../CINEMA/cinema.html">CINEMA</a></li>
+        <li><a href="../FILME NOI/filme_noi.html">FILME NOI</a></li>
+        <li><a href="../GENURI/genuri.html">GENURI</a></li>
+        <li><a href="../OFERTE/oferte.html">OFERTE</a></li>
+        <li><a href="../CONTACT/contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <div id="film-details"></div>
+    <script>
+      const films = [
+        {
+          id: 1,
+          title: "Divergent",
+          director: "Neil Burger",
+          cast: "Shailene Woodley, Theo James, Ashley Judd",
+          description:
+            "Divergent este un film american distopic de acțiune și științifico-fantastic din 2014, regizat de Neil Burger. Filmul este bazat pe romanul omonim scris de Veronica Roth și urmărește povestea unei tinere care descoperă că este Divergent și trebuie să se ascundă pentru a supraviețui.",
+          genre: "Științifico-fantastic, Acțiune",
+          duration: "139 minute",
+          rating: "AP-12",
+          release: "2014",
+          showTimes: ["14:30", "17:00", "19:30", "22:00"],
+          posterUrl: "../IMAGINI/divergent.jpg",
+          score: 4.5,
+        },
+        {
+          id: 2,
+          title: "Forma Apei",
+          director: "Guillermo del Toro",
+          cast: "Sally Hawkins, Michael Shannon, Richard Jenkins",
+          description:
+            "Forma Apei este o poveste de dragoste fantastică despre o femeie mută care dezvoltă o relație neobișnuită cu o creatură amfibiană ținută captivă într-un laborator secret al guvernului.",
+          genre: "Romantic, Fantasy",
+          duration: "123 minute",
+          rating: "AP-12",
+          release: "2017",
+          showTimes: ["13:00", "15:30", "18:00", "20:30"],
+          posterUrl: "../IMAGINI/The_Shape_of_Water_.png",
+          score: 4.8,
+        },
+        {
+          id: 3,
+          title: "Omul-Păianjen",
+          director: "Jon Watts",
+          cast: "Tom Holland, Zendaya, Jacob Batalon",
+          description:
+            "Omul-Păianjen urmărește aventurile lui Peter Parker, un adolescent care jonglează între viața de elev și responsabilitățile de supererou.",
+          genre: "Acțiune, Aventură",
+          duration: "133 minute",
+          rating: "AP-12",
+          release: "2017",
+          showTimes: ["12:00", "15:00", "18:00", "21:00"],
+          posterUrl: "../IMAGINI/Spider-Man Homecoming.jpg",
+          score: 4.7,
+        },
+        {
+          id: 4,
+          title: "Thor: Ragnarok",
+          director: "Taika Waititi",
+          cast: "Chris Hemsworth, Tom Hiddleston, Cate Blanchett",
+          description:
+            "Thor: Ragnarok îl urmărește pe Thor care încearcă să-și salveze casa, Asgard, de distrugerea iminentă, luptând împotriva surorii sale, Hela.",
+          genre: "Acțiune, Aventură",
+          duration: "130 minute",
+          rating: "AP-12",
+          release: "2017",
+          showTimes: ["14:00", "17:00", "20:00", "23:00"],
+          posterUrl: "../IMAGINI/Ragnarok.jpg",
+          score: 4.6,
+        },
+        {
+          id: 5,
+          title: "The Hunger Games: Catching Fire",
+          director: "Francis Lawrence",
+          cast: "Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth",
+          description:
+            "Catching Fire continuă povestea lui Katniss Everdeen, care se întoarce acasă după ce a câștigat Jocurile Foamei, dar este aruncată înapoi în arena mortală pentru ediția a 75-a.",
+          genre: "Științifico-fantastic, Aventură",
+          duration: "146 minute",
+          rating: "AP-12",
+          release: "2013",
+          showTimes: ["13:00", "16:00", "19:00", "22:00"],
+          posterUrl: "../IMAGINI/Hunger_Games.jpg",
+          score: 4.7,
+        },
+        {
+          id: 6,
+          title: "After Earth",
+          director: "M. Night Shyamalan",
+          cast: "Will Smith, Jaden Smith",
+          description:
+            "După un accident pe o planetă ostilă, un tată și fiul său trebuie să înfrunte pericolele necunoscute pentru a supraviețui.",
+          genre: "Științifico-fantastic, Aventură",
+          duration: "100 minute",
+          rating: "AP-12",
+          release: "2013",
+          showTimes: ["12:30", "15:30", "18:30", "21:30"],
+          posterUrl: "../IMAGINI/After_earth.jpg",
+          score: 4.3,
+        },
+        {
+          id: 7,
+          title: "Gladiator",
+          director: "Ridley Scott",
+          cast: "Russell Crowe, Joaquin Phoenix",
+          description:
+            "Gladiator spune povestea unui general roman care devine sclav și gladiator, căutând răzbunare pentru moartea familiei sale.",
+          genre: "Dramă, Acțiune",
+          duration: "155 minute",
+          rating: "AP-15",
+          release: "2000",
+          showTimes: ["14:00", "18:00", "21:30"],
+          posterUrl: "../IMAGINI/Gladiator.jpg",
+          score: 4.9,
+        },
+        {
+          id: 8,
+          title: "Oppenheimer",
+          director: "Christopher Nolan",
+          cast: "Cillian Murphy, Robert Downey Jr.",
+          description:
+            "Oppenheimer explorează viața și cariera lui J. Robert Oppenheimer, fizicianul din spatele proiectului Manhattan și al bombei atomice.",
+          genre: "Dramă, Biografic",
+          duration: "180 minute",
+          rating: "AP-12",
+          release: "2023",
+          showTimes: ["10:30", "14:00", "17:30", "21:00"],
+          posterUrl: "../IMAGINI/Oppenhimer.jpg",
+          score: 4.8,
+        },
+      ];
+
+      // Funcție pentru generarea stelelor de rating
+      function generateStarRating(score) {
+        const fullStars = Math.floor(score);
+        const hasHalfStar = score % 1 >= 0.5;
+        let starsHtml = "";
+
+        for (let i = 0; i < fullStars; i++) {
+          starsHtml += '<i class="fas fa-star"></i>';
+        }
+        if (hasHalfStar) {
+          starsHtml += '<i class="fas fa-star-half-alt"></i>';
+        }
+        const emptyStars = 5 - Math.ceil(score);
+        for (let i = 0; i < emptyStars; i++) {
+          starsHtml += '<i class="far fa-star"></i>';
+        }
+
+        return starsHtml;
+      }
+
+      // Citim ID-ul din URL
+      const params = new URLSearchParams(window.location.search);
+      const filmId = parseInt(params.get("id"), 10);
+
+      // Căutăm detaliile filmului
+      const film = films.find((f) => f.id === filmId);
+
+      if (film) {
+        const filmDetails = document.getElementById("film-details");
+        filmDetails.innerHTML = `
+    <div class="film-header">
+      <img src="${film.posterUrl}" alt="${film.title}" class="film-poster" />
+      <div class="film-info">
+        <h1 class="film-titlu">${film.title}</h1>
+        <div class="film-meta">
+          <p><strong>Regia:</strong> ${film.director}</p>
+          <p><strong>Distribuția:</strong> ${film.cast}</p>
+          <p><strong>Gen film:</strong> ${film.genre}</p>
+          <p><strong>Durata:</strong> ${film.duration} minute</p>
+          <p><strong>Rating:</strong> ${film.rating}</p>
+        </div>
+        <div class="film-rating">
+          ${generateStarRating(film.score)}
+          <span>(${film.score}/5)</span>
+        </div>
+        <a href="#" class="buton-rezerva">Rezervă bilete</a>
+      </div>
+    </div>
+
+    <div class="film-sectiune">
+      <h3>Descriere</h3>
+      <div class="film-descriere">
+        <p>${film.description}</p>
+      </div>
+    </div>
+
+    <div class="film-sectiune">
+      <h3>Program Rulare</h3>
+      <div class="program-filme">
+        ${film.showTimes
+          .map(
+            (time) => `
+          <div class="ora-film">${time}</div>
+        `
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+      } else {
+        document.getElementById("film-details").innerHTML = `
+    <div class="film-sectiune">
+      <h3>Film negăsit</h3>
+      <p>Ne pare rău, filmul căutat nu a fost găsit.</p>
+    </div>
+  `;
+      }
+    </script>
+
+    <footer>
+      <div>
+        <div>
+          <h4><a href="#">Lumea Filmelor</a></h4>
+          <p>
+            <a href="#">Cinema</a> - <a href="#">Noi</a> -
+            <a href="#">Genuri</a> - <a href="#">Oferte</a> -
+            <a href="#">Contact</a>
+          </p>
+        </div>
+        <div>
+          <h4>Cinematografe:</h4>
+          <p>București</p>
+          <p>Satu Mare</p>
+          <p>Sibiu</p>
+        </div>
+        <div>
+          <h4>Urmărește-ne:</h4>
+          <p class="social-link">
+            <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+          </p>
+          <p class="social-link">
+            <a href="#"><i class="fab fa-youtube"></i>YouTube</a>
+          </p>
+          <p class="social-link">
+            <a href="#"><i class="fab fa-tiktok"></i>TikTok</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
